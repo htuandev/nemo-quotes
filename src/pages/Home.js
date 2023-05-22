@@ -33,7 +33,7 @@ export default function Home() {
         <Loading isAdmin={isAdmin} />
       ) : (
         <>
-          <S.Box>
+          <S.Box key={quote._id}>
             <S.ProgressBar from="left" top />
             <S.Center>
               <S.Content>
@@ -92,7 +92,7 @@ const S = {
     transform-origin: ${(props) => props.from};
     margin-top: ${(props) => (props.top ? "0" : "1rem")};
     margin-bottom: ${(props) => (props.bottom ? "0" : "1rem")};
-    animation: grow 15s linear infinite;
+    animation: grow 15s linear;
   `,
 
   Content: styled.div`
@@ -101,7 +101,7 @@ const S = {
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    animation: zoom-in 15s ease-in-out infinite;
+    animation: zoom-in 2s ease-in-out;
   `,
 
   Center: styled.div`

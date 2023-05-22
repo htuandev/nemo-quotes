@@ -73,10 +73,6 @@ export const GlobalStyles = createGlobalStyle`
             opacity: 0;
             transform: scale3d(0.475, 0.475, 0.475) translate3d(0px, 0px, 1000px);
         }
-        8%{
-            opacity: 0.8;
-            transform: none
-        }
     }
 
     @keyframes grow {
